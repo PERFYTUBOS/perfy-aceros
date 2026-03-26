@@ -3,99 +3,166 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>PERFY - Corte y Doblez de Acero</title>
+<title>PERFY | Corte y Doblez Industrial</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
 
 <style>
+*{margin:0;padding:0;box-sizing:border-box}
+
 body{
-  margin:0;
-  font-family: Arial, sans-serif;
+  font-family:'Montserrat', sans-serif;
+  background:#0f172a;
+  color:#fff;
 }
 
-.servicios{
-  display: flex;
-  justify-content: center;
-  gap: 15px
-}
-
-.servicios img {  
-  widht: 30%
-  height: 280px;
-  object-fit: cover;
-  border-radius: 15px;
-}
-  
-/* 🔥 BANNER PRINCIPAL */
+/* HEADER */
 header{
-  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('img1.jpg');
-  background-size: cover;
-  background-position: center;
-  color: white;
-  text-align: center;
-  padding: 100px 20px;
+  height:90vh;
+  background:linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.85)), url('img1.jpg');
+  background-size:cover;
+  background-position:center;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
 }
 
 header img{
-  width:260px;
+  width:280px;
   margin-bottom:20px;
 }
 
-header p{
-  font-size: 18px;
+header h1{
+  font-size:38px;
+  letter-spacing:2px;
 }
 
-.whatsapp{
-  display:inline-block;
-  margin-top:20px;
-  padding:12px 25px;
-  background:#25D366;
+header p{
+  margin-top:10px;
+  font-size:18px;
+  color:#cbd5e1;
+}
+
+.btn{
+  margin-top:25px;
+  padding:14px 30px;
+  background:#e10600;
   color:white;
   text-decoration:none;
-  border-radius:5px;
+  border-radius:6px;
+  font-weight:600;
+  transition:0.3s;
+}
+
+.btn:hover{
+  background:#ff2a2a;
+  transform:scale(1.05);
+}
+
+/* SECCIONES */
+section{
+  padding:60px 20px;
+  text-align:center;
+}
+
+h2{
+  margin-bottom:30px;
+  color:#e10600;
+  font-size:28px;
 }
 
 /* SERVICIOS */
-section{
-  padding:40px 20px;
-  text-align:center;
-}
-
 .services{
-  display: flex;
-  justify-content: center;
-  gap: 20px;
+  display:flex;
+  justify-content:center;
+  gap:25px;
+  flex-wrap:wrap;
 }
 
 .card{
-  background:#f4f4f4;
-  padding:20px;
-  border-radius:10px;
-  text-align:center
+  background:#1e293b;
+  padding:25px;
+  border-radius:15px;
+  width:220px;
+  transition:0.3s;
+  border:1px solid #334155;
 }
-  
- 
+
+.card:hover{
+  transform:translateY(-8px);
+  box-shadow:0 10px 25px rgba(0,0,0,0.5);
+}
+
+.card h3{
+  margin-bottom:10px;
+}
+
+.card p{
+  font-size:14px;
+  color:#94a3b8;
+}
+
+/* GALERIA */
+.gallery{
+  display:flex;
+  gap:15px;
+  justify-content:center;
+  flex-wrap:wrap;
+}
+
+.gallery img{
+  width:30%;
+  height:250px;
+  object-fit:cover;
+  border-radius:12px;
+  transition:0.3s;
+}
+
+.gallery img:hover{
+  transform:scale(1.05);
+}
+
+/* CTA */
+.cta{
+  background:#e10600;
+  padding:50px 20px;
+}
+
+.cta h2{
+  color:white;
+}
+
+.cta p{
+  margin:15px 0;
+}
+
 /* FOOTER */
 footer{
-  background:#111;
-  color:white;
-  text-align:center;
-  padding:20px;
+  background:#020617;
+  padding:25px;
+  font-size:14px;
 }
-h2 {
-  color:#e10600;
-  text-transform: uppercase;
- } 
-  
-</style>
 
+/* RESPONSIVE */
+@media(max-width:768px){
+  .gallery img{
+    width:90%;
+  }
+}
+
+</style>
 </head>
 
 <body>
 
 <header>
   <img src="LOGOPERFY.png">
-  <p>Corte láser, doblez y rolado de acero con precisión</p>
+  <h1>CORTE LÁSER • DOBLEZ • ROLADO</h1>
+  <p>Fabricación industrial con precisión y calidad</p>
 
-  <a href="https://wa.me/524493867499" class="whatsapp">
+  <a href="https://wa.me/524493867499" class="btn">
     Cotizar por WhatsApp
   </a>
 </header>
@@ -104,36 +171,50 @@ h2 {
   <h2>Servicios</h2>
 
   <div class="services">
-    <div class="card">Corte Láser</div>
-    <div class="card">Doblez</div>
-    <div class="card">Rolado</div>
-    <div class="card">Fabricación</div>
+    <div class="card">
+      <h3>Corte Láser</h3>
+      <p>Alta precisión en acero inoxidable y carbón</p>
+    </div>
+
+    <div class="card">
+      <h3>Doblez</h3>
+      <p>Doblado exacto con maquinaria especializada</p>
+    </div>
+
+    <div class="card">
+      <h3>Rolado</h3>
+      <p>Curvado profesional de lámina y placa</p>
+    </div>
+
+    <div class="card">
+      <h3>Fabricación</h3>
+      <p>Proyectos industriales a medida</p>
+    </div>
   </div>
 </section>
 
 <section>
   <h2>Trabajos</h2>
 
-  <div class="servicios">
+  <div class="gallery">
     <img src="img1.jpg">
     <img src="img2.jpg">
     <img src="img3.jpg">
   </div>
-
 </section>
 
-<section>
+<section class="cta">
   <h2>Cotización rápida</h2>
-  <p>Envíanos tus medidas o diseño y te cotizamos rápido</p>
+  <p>Envíanos tus planos o medidas y te respondemos en minutos</p>
 
-  <a href="https://wa.me/524493867499" class="whatsapp">
+  <a href="https://wa.me/524493867499" class="btn">
     Enviar mensaje
   </a>
 </section>
 
 <footer>
-  <p>PERFY - Aguascalientes</p>
-  <p>Tel: 449 386 7499</p>
+  <p><strong>Perfytubos y Maquilas Industriales</strong></p>
+  <p>Aguascalientes | Tel: 449 386 7499</p>
 </footer>
 
 </body>
