@@ -37,6 +37,17 @@ header img{
 header h1{
   font-size:38px;
   letter-spacing:2px;
+  position:relative;
+  background: linear-gradient(120deg, #999, #fff, #999);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: brillo 3s linear infinite;
+}
+
+@keyframes brillo{
+  0%{ background-position: -200% center; }
+  100%{ background-position: 200% center; }
 }
 
 header p{
@@ -213,7 +224,7 @@ footer{
 </section>
 
 <footer>
-  <p><strong>Perfytubos y Maquilas Industriales</strong></p>
+  <p><strong>PERFY Tubos y Maquilas Industriales</strong></p>
   <p>Aguascalientes | Tel: 449 386 7499</p>
 </footer>
 
